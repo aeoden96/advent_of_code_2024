@@ -4,14 +4,14 @@
         {
             "label": "Run Day 1",
             "type": "shell",
-            "command": "cargo run -p day01",
+            "command": "cargo build -p day01",
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": []
         },
         {
             "label": "Run Day 2",
             "type": "shell",
-            "command": "cargo run -p day02",
+            "command": "cargo build -p day02",
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": []
         }

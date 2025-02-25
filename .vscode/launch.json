@@ -2,6 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "preLaunchTask": "Run Day 1",
             "name": "Debug Day 1",
             "type": "lldb",
             "request": "launch",
@@ -10,6 +11,7 @@
             "cwd": "${workspaceFolder}"
         },
         {
+            "preLaunchTask": "Run Day 2",
             "name": "Debug Day 2",
             "type": "lldb",
             "request": "launch",

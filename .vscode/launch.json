@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Day 1",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/day01",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug Day 2",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/day02",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+        // Add more days here
+    ]
+}

@@ -1,0 +1,14 @@
+[package]
+name = "advent_of_code"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members = [
+    "day01",
+    "day02",
+    "utils",
+    # Add other days here
+]
+
+[dependencies]

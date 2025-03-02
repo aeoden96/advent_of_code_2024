@@ -5,17 +5,13 @@ use std::io::Lines;
 use std::io::BufReader;
 use std::fs::File;
 fn main() {
-    let file = read_lines("inputs/day01.txt");
+    let lines = read_lines("inputs/day01.txt");
 
-    let lines = match file {
-        Ok(file) => file,
-        Err(e) => panic!("Error reading file: {}", e),
-    };
 
     second_part(lines);
 }
 
-
+#[allow(dead_code)]
 fn first_part(lines: Lines<BufReader<File>>) {
     let mut first_column: Vec<i32> = vec![];
     let mut second_column: Vec<i32> = vec![];

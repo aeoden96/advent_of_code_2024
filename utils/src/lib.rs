@@ -1,6 +1,5 @@
 use std::fs;
 use std::io::{self, BufRead, BufReader};
-use std::path::Path;
 
 // Read entire file as a string
  pub fn read_input(s: &str) -> String {
@@ -8,12 +7,10 @@ use std::path::Path;
 }
 
 // Read file line by line
-pub fn read_lines<P>(filename: P) -> io::Result<io::Lines<BufReader<fs::File>>>
-where
-    P: AsRef<Path>,
+pub fn read_lines(s: &str) -> io::Lines<BufReader<fs::File>>
 {
-    let file = fs::File::open(filename)?;
-    Ok(BufReader::new(file).lines())
+    let file = fs::File::open(s).unwrap();
+    BufReader::new(file).lines()
 }
 
 /*     let file =  read_lines("inputs/day01.txt");
@@ -42,7 +39,7 @@ mod tests {
 
     #[test]
     fn test_read_lines() {
-        let lines = read_lines("inputs/day01.txt").unwrap();
+        let lines = read_lines("inputs/day01.txt");
         let vec: Vec<String> = lines.map(|l| l.unwrap()).collect();
         assert_eq!(vec.len(), 100);
     }
